@@ -10,14 +10,20 @@ pygame.init()
 
 # Define some colours
 # Colours are defined using RGB values
-BLACK = (0, 0, 0)
+DARKGREY = (17, 46, 19)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
+GREEN = (127, 235, 130)
+BROWN = (64, 62, 26)
 RED = (255, 0, 0)
-
+BLACK = (0, 0, 0)
 # Set the screen size (please don't change this)
+
 SCREENWIDTH = 400
 SCREENHEIGHT = 400
+
+size = (SCREENWIDTH, SCREENHEIGHT)
+screen = pygame.display.set_mode(size)
+
 
 # Open a new window
 # The window is defined as (width, height), measured in pixels
@@ -44,12 +50,14 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.fill(RED)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
+    pygame.draw.ellipse(screen, BLACK, [50, 7, 375, 375], 0)
+    pygame.draw.ellipse(screen, WHITE, [15, 15, 375, 375], 0)
+    pygame.draw.ellipse(screen, RED, [100, 100, 200, 200], 0)
+    pygame.draw.ellipse(screen, WHITE, [125, 125, 150, 150], 0)
+    pygame.draw.rect(screen , RED, [100 , 0 , 25 , 200], 0)
 
     # Update the screen with queued shapes
     pygame.display.flip()
